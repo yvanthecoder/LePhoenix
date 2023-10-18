@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- === Coding by Yvan Djopa | www.yvan.djopa.fr === -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="exercices.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!--<title>Responsive Navigation Menu Bar</title>-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+    <title>LePhoenix</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="../index.html">LePhoenix</a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="../index.html">LePhoenix</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="../index.html">Acceuil</a></li>
+                    <li><a href="../Epreuves/index.html">Epreuves</a></li>
+                    <!--<li><a href="#">Test & Quizz</a></li>-->
+                    <li><a href="index.html">Exercices & Corrigés</a></li>
+                    <li><a href="../Pages/about.html">A propos</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <!--<i class='bx bx-search search'></i>-->
+                   </div>
+                    <!--
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="display">
+        <aside>
+            <div class="display">
+                <div class="title">Exercices Mécanique</div>
+                <div class="barre"></div>
+            </div>
+            <div class="display">
+                <div class="chapter"><div class="chap">Chapitre 1</div><a href="pdf/sol1_17_18.pdf"><div class="chap-name">Complement de Mathématiques</div></a></div>
+                <div class="chapter"><div class="chap">Chapitre 2</div><div class="new">New</div><a href="pdf/2.4_cylindriques_spheriques.pdf"><div class="chap-name">Changement de repères (Sphérique, Cylindrique et Cartesien)</div></a></div>
+            </div>
+        </aside>
+    </div>
+    <footer id="about">
+        <div class="content">
+        <div class="left box">
+            <div class="upper">
+            <div class="topic">Apropos</div>
+            <p>LePhoenix est un site web developpé par Yvan DJOPA étudiant à prepas-internationales dans le but d'apporter de l'aide aux étudiants par des exercices-corrigés et des epreuves-corrigés egalement par divers quiz pour rendre le tout ludique.</p>
+            </div>
+            <div class="lower">
+            <div class="topic">Ecrivez-Nous</div>
+            <div class="phone">
+                <a href="#"><i class="fas fa-phone-volume"></i>+237 655 73 45 39</a>
+            </div>
+            <div class="email">
+                <a href="#"><i class="fas fa-envelope"></i>yvandjopa01@gmail.com</a>
+            </div>
+            </div>
+        </div>
+        <div class="middle box">
+            <div class="topic">Nos Matieres</div>
+            <div><a href="exercicesAnalyse.html">Analyse</a></div>
+            <div><a href="exercicesAlgebre.html">Algebre</a></div>
+            <div><a href="exercicesMeca.html">Mecanique</a></div>
+            <div><a href="exercicesElectro.html">Electro-cinetique</a></div>
+            <div><a href="exercicesSI.html">Science de L'ingenieur</a></div>
+            <div><a href="exercicesInfo.html">Informatique</a></div>
+        </div>
+        <div class="right box">
+            <div class="topic">Suivez-Nous</div>
+            <form action="#">
+            <div class="media-icons">
+                <a href="https://www.instagram.com/pi_prepas/?hl=fr"><img src="../images/instagram.png" height="45px" width="45px"/></a>
+                <a href="https://web.facebook.com/PrepasInternationales"><img src="../images/facebook.png" height="45px" width="45px"></a>
+                <a href="#"><img src="../images/twitter.png" height="45px" width="45px"></a>
+                <a href="#"><img src="../images/linkedin.png" height="45px" width="45px"/></a>
+            </div>
+            </form>
+        </div>
+        </div>
+        <div class="bottom">
+        <p>Copyright © 2022 <a href="http://www.prepas-internationales.org">PREPAS-INTERNATIONALES</a> All rights reserved</p>
+        </div>
+    </footer>
+  
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev", 
+        },
+    });
+
+    const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+
+        let getMode = localStorage.getItem("mode");
+            if(getMode && getMode === "dark-mode"){
+                body.classList.add("dark");
+            }
+
+    // js code to toggle dark and light mode
+        modeToggle.addEventListener("click" , () =>{
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+
+            // js code to keep user selected mode even page refresh or file reopen
+            if(!body.classList.contains("dark")){
+                localStorage.setItem("mode" , "light-mode");
+            }else{
+                localStorage.setItem("mode" , "dark-mode");
+            }
+        });
+
+    // js code to toggle search box
+            searchToggle.addEventListener("click" , () =>{
+            searchToggle.classList.toggle("active");
+        });
+    
+        
+    //   js code to toggle sidebar
+    sidebarOpen.addEventListener("click" , () =>{
+        nav.classList.add("active");
+    });
+
+    body.addEventListener("click" , e =>{
+        let clickedElm = e.target;
+
+        if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+            nav.classList.remove("active");
+        }
+    });
+    </script>
+</body>
+</html>

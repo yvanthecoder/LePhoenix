@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz LePhoenix</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- start Quiz button -->
+    <div class="responsive">
+    <div class="start_btn"><button>Commencer</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Quelques Regles du PI Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Tu auras juste <span>15 secondes</span> pour chaque questions.</div>
+            <div class="info">2. Quand tu as choisie une reponse tu ne peux plus changer.</div>
+            <div class="info">3. Tu ne pourras plus selectionner une question une fois le temps terminé.</div>
+            <div class="info">4. Tu ne pourras pas sortir du Jeu pendant une partie.</div>
+            <div class="info">5. Tu auras 1 points par reponse correcte.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sortir</button>
+            <button class="restart">Continuer</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Pi Quizz</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Line</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Here I've inserted question from JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Here I've inserted options from JavaScript -->
+            </div>
+        </section>
+
+        <!-- footer of Quiz Box -->
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Suivant</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Tu as finis le Quiz!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Rejouer</button>
+            <button class="quit">Quitter</button>
+        </div>
+    </div>
+    </div>
+    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
+    <script src="questions/analyse.js"></script>
+
+    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
+    <script src="script.js"></script>
+
+</body>
+</html>
